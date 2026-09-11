@@ -1,0 +1,249 @@
+﻿<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Costrux.id adalah estimator RAB otomatis berbasis AI untuk menghitung biaya konstruksi lebih cepat, akurat, dan siap ekspor.">
+    <title>Costrux.id - Estimator RAB Otomatis Berbasis AI</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Oswald:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./assets/css/style.css">
+
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#FF7900',
+                        dark: '#262626',
+                        charcoal: '#323232',
+                        paper: '#FFFFFF'
+                    },
+                    fontFamily: {
+                        heading: ['Oswald', 'Oswald fallback', 'sans-serif'],
+                        body: ['Inter', 'Inter fallback', 'sans-serif']
+                    },
+                    boxShadow: {
+                        glow: '0 24px 80px rgba(255, 121, 0, 0.22)'
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-paper text-dark font-body antialiased">
+    <nav id="site-navbar" class="navbar-shell fixed left-1/2 top-5 z-50 w-[calc(100%-2rem)] max-w-7xl -translate-x-1/2 rounded-full px-4 py-3 backdrop-blur-xl md:px-6">
+        <div class="flex items-center justify-between gap-4">
+            <a href="./index.html" class="brand-logo-link flex items-center" aria-label="Costrux.id beranda">
+                <img src="./assets/image/costrux.png" alt="Costrux.id" class="brand-logo">
+            </a>
+
+            <div class="hidden items-center gap-3 text-sm font-bold md:flex lg:gap-6">
+                <a class="nav-link nav-link-active rounded-full px-5 py-2.5" href="./index.html">Beranda</a>
+                <a class="nav-link rounded-full px-4 py-2.5" href="./pages/about.html">Tentang Kami</a>
+                <a class="nav-link rounded-full px-4 py-2.5" href="./pages/packages.html">Paket</a>
+                <a class="nav-link rounded-full px-4 py-2.5" href="./pages/contact.html">Hubungi Kami</a>
+            </div>
+
+            <div class="flex items-center gap-2">
+                <a href="./index.html#mulai" class="hidden rounded-full bg-primary px-4 py-3 text-center text-xs font-bold text-white shadow-glow transition hover:-translate-y-0.5 hover:bg-orange-600 sm:inline-flex sm:px-5 sm:text-sm">
+                    Mulai Menghitung RAB
+                </a>
+                <button id="mobile-menu-button" class="grid h-11 w-11 place-items-center rounded-full bg-primary text-white shadow-glow md:hidden" type="button" aria-label="Buka menu navigasi" aria-controls="mobile-menu" aria-expanded="false">
+                    <span class="text-2xl leading-none">&#9776;</span>
+                </button>
+            </div>
+        </div>
+        <div id="mobile-menu" class="mobile-menu md:hidden">
+            <a class="mobile-menu-link nav-link-active" href="./index.html">Beranda</a>
+            <a class="mobile-menu-link" href="./pages/about.html">Tentang Kami</a>
+            <a class="mobile-menu-link" href="./pages/packages.html">Paket</a>
+            <a class="mobile-menu-link" href="./pages/contact.html">Hubungi Kami</a>
+            <a class="mobile-menu-link bg-primary text-white" href="./index.html#mulai">Mulai Menghitung RAB</a>
+        </div>
+    </nav>
+
+    <main>
+        <section id="beranda" class="relative overflow-hidden bg-dark pt-32 text-white">
+            <div class="absolute -left-24 top-24 h-72 w-72 rounded-full bg-primary/25 blur-3xl"></div>
+            <div class="absolute right-0 top-0 h-96 w-96 rounded-full bg-primary/10 blur-3xl"></div>
+            <div class="mx-auto grid max-w-7xl items-center gap-12 px-5 pb-24 pt-8 lg:grid-cols-2 lg:px-8">
+                <div class="relative z-10">
+                    <h1 class="font-heading text-4xl font-bold leading-tight tracking-tight md:text-6xl">
+                        Hitung RAB proyek konstruksi dengan bantuan <span class="text-primary">AI</span> dalam hitungan menit.
+                    </h1>
+                    <p class="mt-6 max-w-2xl text-lg leading-8 text-white/70">
+                        Costrux.id membantu kontraktor, konsultan, dan pemilik proyek membuat estimasi biaya, daftar material, upah, serta rekap RAB secara otomatis berdasarkan kebutuhan proyek Anda.
+                    </p>
+                    <div class="mt-9 flex flex-col gap-4 sm:flex-row">
+                        <a href="#mulai" class="rounded-full bg-primary px-7 py-4 text-center font-bold text-white shadow-glow transition hover:-translate-y-1 hover:bg-orange-600">
+                            Mulai Menghitung RAB
+                        </a>
+                        <a href="#cara-kerja" class="rounded-full border border-white/20 px-7 py-4 text-center font-bold text-white transition hover:border-primary hover:text-primary">
+                            Lihat Cara Kerja
+                        </a>
+                    </div>
+                    <div class="mt-10 grid max-w-lg grid-cols-3 gap-4 text-center">
+                        <div class="rounded-2xl bg-white/10 p-4 ring-1 ring-white/10">
+                            <strong class="font-heading block text-2xl text-primary">5x</strong>
+                            <span class="text-xs text-white/60">Lebih cepat</span>
+                        </div>
+                        <div class="rounded-2xl bg-white/10 p-4 ring-1 ring-white/10">
+                            <strong class="font-heading block text-2xl text-primary">AI</strong>
+                            <span class="text-xs text-white/60">Rekomendasi item</span>
+                        </div>
+                        <div class="rounded-2xl bg-white/10 p-4 ring-1 ring-white/10">
+                            <strong class="font-heading block text-2xl text-primary">XLS</strong>
+                            <span class="text-xs text-white/60">Siap ekspor</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="relative z-10">
+                    <div class="rounded-[2rem] border border-white/10 bg-charcoal p-4 shadow-2xl">
+                        <div class="rounded-[1.5rem] bg-white p-5 text-dark">
+                            <div class="mb-5 flex items-center justify-between gap-4">
+                                <div>
+                                    <p class="text-sm font-bold text-primary">AI RAB Generator</p>
+                                    <h2 class="font-heading text-xl font-bold">Rumah Tinggal 2 Lantai</h2>
+                                </div>
+                                <span class="rounded-full bg-orange-100 px-3 py-1 text-xs font-bold text-primary">Live Estimate</span>
+                            </div>
+                            <div class="grid gap-4 md:grid-cols-3">
+                                <div class="rounded-2xl bg-neutral-100 p-4">
+                                    <span class="text-xs text-neutral-500">Luas Bangunan</span>
+                                    <p class="font-heading mt-1 text-2xl font-bold">120 m²</p>
+                                </div>
+                                <div class="rounded-2xl bg-neutral-100 p-4">
+                                    <span class="text-xs text-neutral-500">Lokasi</span>
+                                    <p class="font-heading mt-1 text-2xl font-bold">Jakarta</p>
+                                </div>
+                                <div class="rounded-2xl bg-primary p-4 text-white">
+                                    <span class="text-xs text-white/75">Total RAB</span>
+                                    <p class="font-heading mt-1 text-2xl font-bold">Rp 684 jt</p>
+                                </div>
+                            </div>
+                            <div class="mt-5 space-y-3">
+                                <div class="flex items-center justify-between gap-4 rounded-2xl border border-neutral-200 p-4">
+                                    <span class="font-semibold">Pekerjaan Struktur</span><span class="font-heading text-right font-bold">Rp 246.000.000</span>
+                                </div>
+                                <div class="flex items-center justify-between gap-4 rounded-2xl border border-neutral-200 p-4">
+                                    <span class="font-semibold">Arsitektur & Finishing</span><span class="font-heading text-right font-bold">Rp 318.000.000</span>
+                                </div>
+                                <div class="flex items-center justify-between gap-4 rounded-2xl border border-neutral-200 p-4">
+                                    <span class="font-semibold">MEP & Utilitas</span><span class="font-heading text-right font-bold">Rp 120.000.000</span>
+                                </div>
+                            </div>
+                            <div class="mt-5 rounded-2xl bg-dark p-4 text-white">
+                                <div class="mb-2 flex justify-between text-sm"><span>Akurasi estimasi AI</span><span>92%</span></div>
+                                <div class="h-3 rounded-full bg-white/10"><div class="h-3 w-[92%] rounded-full bg-primary"></div></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="tentang-kami" class="bg-white px-5 py-24 lg:px-8">
+            <div class="mx-auto grid max-w-7xl gap-12 lg:grid-cols-[0.9fr_1.1fr] lg:items-center">
+                <div class="rounded-[2rem] bg-neutral-100 p-8">
+                    <p class="text-sm font-bold uppercase tracking-[0.25em] text-primary">Tentang Kami</p>
+                    <h2 class="font-heading mt-4 text-3xl font-bold leading-tight text-dark md:text-5xl">Platform estimasi biaya untuk keputusan proyek yang lebih yakin.</h2>
+                </div>
+                <div class="space-y-5 text-lg leading-8 text-neutral-600">
+                    <p>Costrux.id dirancang untuk menyederhanakan proses penyusunan Rencana Anggaran Biaya. Pengguna cukup memasukkan parameter proyek, lalu sistem AI membantu menyusun komponen pekerjaan, volume, harga satuan, dan rekap biaya.</p>
+                    <p>Fokus kami adalah menghadirkan pengalaman yang cepat, jelas, dan mudah digunakan tanpa menghilangkan kontrol profesional dalam proses validasi estimasi.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="cara-kerja" class="bg-neutral-100 px-5 py-24 lg:px-8">
+            <div class="mx-auto max-w-7xl">
+                <div class="mx-auto max-w-3xl text-center">
+                    <p class="font-bold text-primary">Cara Kerja</p>
+                    <h2 class="font-heading mt-3 text-3xl font-bold text-dark md:text-5xl">Dari data proyek menjadi RAB siap pakai.</h2>
+                </div>
+                <div class="mt-14 grid gap-6 md:grid-cols-4">
+                    <div class="rounded-3xl bg-white p-6 shadow-sm"><span class="font-heading text-4xl font-bold text-primary">01</span><h3 class="font-heading mt-4 text-xl font-bold">Isi Data</h3><p class="mt-3 text-neutral-600">Masukkan jenis bangunan, luas, lokasi, kualitas material, dan kebutuhan khusus.</p></div>
+                    <div class="rounded-3xl bg-white p-6 shadow-sm"><span class="font-heading text-4xl font-bold text-primary">02</span><h3 class="font-heading mt-4 text-xl font-bold">AI Analisis</h3><p class="mt-3 text-neutral-600">Sistem menyusun item pekerjaan dan estimasi volume berdasarkan parameter proyek.</p></div>
+                    <div class="rounded-3xl bg-white p-6 shadow-sm"><span class="font-heading text-4xl font-bold text-primary">03</span><h3 class="font-heading mt-4 text-xl font-bold">Review RAB</h3><p class="mt-3 text-neutral-600">Periksa rincian material, upah, overhead, margin, dan subtotal setiap pekerjaan.</p></div>
+                    <div class="rounded-3xl bg-white p-6 shadow-sm"><span class="font-heading text-4xl font-bold text-primary">04</span><h3 class="font-heading mt-4 text-xl font-bold">Export</h3><p class="mt-3 text-neutral-600">Unduh laporan RAB untuk proposal, tender, atau diskusi bersama klien.</p></div>
+                </div>
+            </div>
+        </section>
+
+        <section id="paket" class="bg-dark px-5 py-24 text-white lg:px-8">
+            <div class="mx-auto max-w-7xl">
+                <div class="flex flex-col justify-between gap-6 md:flex-row md:items-end">
+                    <div>
+                        <p class="font-bold text-primary">Paket</p>
+                        <h2 class="font-heading mt-3 text-3xl font-bold md:text-5xl">Pilih paket sesuai kebutuhan proyek.</h2>
+                    </div>
+                    <p class="max-w-xl text-white/60">Mulai dari estimasi sederhana hingga kebutuhan tim profesional dengan laporan dan kolaborasi lebih lengkap.</p>
+                </div>
+                <div class="mt-12 grid gap-6 lg:grid-cols-3">
+                    <article class="rounded-[2rem] border border-white/10 bg-charcoal p-8">
+                        <h3 class="font-heading text-2xl font-bold">Starter</h3><p class="mt-3 text-white/60">Untuk pemilik rumah dan estimasi awal.</p><p class="font-heading mt-8 text-4xl font-bold">Gratis</p>
+                        <ul class="mt-8 space-y-3 text-white/70"><li>✓ 3 estimasi RAB/bulan</li><li>✓ Ringkasan biaya proyek</li><li>✓ Simulasi luas bangunan</li></ul>
+                    </article>
+                    <article class="rounded-[2rem] bg-primary p-8 text-white shadow-glow">
+                        <h3 class="font-heading text-2xl font-bold">Pro</h3><p class="mt-3 text-white/60">Untuk kontraktor dan konsultan aktif.</p><p class="font-heading mt-8 text-4xl font-bold">Rp149rb<span class="text-base font-semibold">/bln</span></p>
+                        <ul class="mt-8 space-y-3 text-white"><li>✓ Estimasi RAB unlimited</li><li>✓ Database harga regional</li><li>✓ Export PDF & Excel</li><li>✓ Rekomendasi item AI</li></ul>
+                    </article>
+                    <article class="rounded-[2rem] border border-white/10 bg-charcoal p-8">
+                        <h3 class="font-heading text-2xl font-bold">Enterprise</h3><p class="mt-3 text-white/60">Untuk perusahaan dan tim proyek.</p><p class="font-heading mt-8 text-4xl font-bold">Custom</p>
+                        <ul class="mt-8 space-y-3 text-white/70"><li>✓ Multi-user workspace</li><li>✓ Approval workflow</li><li>✓ Integrasi data internal</li><li>✓ Dukungan prioritas</li></ul>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section id="mulai" class="bg-white px-5 py-24 lg:px-8">
+            <div class="mx-auto grid max-w-7xl gap-10 rounded-[2.5rem] bg-neutral-100 p-6 md:p-10 lg:grid-cols-2">
+                <div>
+                    <p class="font-bold text-primary">Mulai Menghitung RAB</p>
+                    <h2 class="font-heading mt-3 text-3xl font-bold text-dark md:text-5xl">Coba estimasi proyek pertama Anda.</h2>
+                    <p class="mt-5 text-neutral-600">Isi data singkat berikut sebagai contoh alur awal. Form ini dapat dikembangkan menjadi kalkulator RAB penuh.</p>
+                </div>
+                <form class="grid gap-4 rounded-[2rem] bg-white p-6 shadow-sm">
+                    <input class="rounded-2xl border border-neutral-200 px-4 py-4 outline-none transition focus:border-primary" type="text" placeholder="Nama proyek" required>
+                    <div class="grid gap-4 sm:grid-cols-2">
+                        <input class="rounded-2xl border border-neutral-200 px-4 py-4 outline-none transition focus:border-primary" type="number" placeholder="Luas bangunan (m²)" required>
+                        <select class="rounded-2xl border border-neutral-200 px-4 py-4 outline-none transition focus:border-primary" required>
+                            <option value="">Jenis bangunan</option><option>Rumah tinggal</option><option>Ruko</option><option>Kantor</option><option>Renovasi</option>
+                        </select>
+                    </div>
+                    <textarea class="min-h-28 rounded-2xl border border-neutral-200 px-4 py-4 outline-none transition focus:border-primary" placeholder="Ceritakan kebutuhan proyek Anda"></textarea>
+                    <button class="rounded-full bg-primary px-7 py-4 font-black text-white shadow-glow transition hover:bg-orange-600" type="submit">Generate Estimasi RAB</button>
+                </form>
+            </div>
+        </section>
+
+        <section id="hubungi-kami" class="bg-charcoal px-5 py-20 text-white lg:px-8">
+            <div class="mx-auto flex max-w-7xl flex-col justify-between gap-8 md:flex-row md:items-center">
+                <div>
+                    <p class="font-bold text-primary">Hubungi Kami</p>
+                    <h2 class="font-heading mt-3 text-3xl font-bold">Butuh demo atau konsultasi?</h2>
+                    <p class="mt-4 max-w-2xl text-white/60">Tim Costrux.id siap membantu Anda menyiapkan alur estimasi RAB yang sesuai dengan kebutuhan bisnis konstruksi.</p>
+                </div>
+                <div class="flex flex-col gap-3 sm:flex-row">
+                    <a class="rounded-full bg-primary px-7 py-4 text-center font-bold text-white shadow-glow hover:bg-orange-600" href="mailto:halo@costrux.id">halo@costrux.id</a>
+                    <a class="rounded-full border border-white/20 px-7 py-4 text-center font-bold text-white hover:border-primary hover:text-primary" href="tel:+6281234567890">+62 812 3456 7890</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-dark px-5 py-8 text-center text-sm text-white/50">
+        <p>&copy; 2026 Costrux.id by Arcventures. All rights reserved.</p>
+    </footer>
+
+    <script src="./assets/js/navbar.js"></script>
+</body>
+</html>
+
+
