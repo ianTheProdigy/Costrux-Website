@@ -16,9 +16,9 @@
 .navbar-shell.navbar-scrolled,
 .navbar-shell.navbar-solid {
     background: var(--paper);
-    border-color: var(--dark);
+    border-color: transparent;
     color: var(--dark);
-    box-shadow: 6px 8px 0 var(--dark);
+    box-shadow: none;
 }
 
 .navbar-shell,
@@ -26,6 +26,26 @@
 .brand-logo,
 .mobile-menu {
     transition: background-color 260ms ease, border-color 260ms ease, color 260ms ease, box-shadow 260ms ease, transform 260ms ease, opacity 260ms ease, filter 260ms ease;
+}
+
+.nav-link-group {
+    position: relative;
+}
+
+.nav-active-indicator {
+    position: absolute;
+    z-index: 0;
+    border-radius: 9999px;
+    background: var(--primary);
+    box-shadow: 0 18px 50px rgba(255, 121, 0, 0.24);
+    pointer-events: none;
+    transition: left 260ms ease, top 260ms ease, width 260ms ease, height 260ms ease;
+}
+
+.nav-link,
+.mobile-menu-link {
+    position: relative;
+    z-index: 1;
 }
 
 .nav-link {
@@ -65,6 +85,12 @@
     box-shadow: 0 18px 50px rgba(255, 121, 0, 0.24);
 }
 
+.nav-link-transitioning {
+    background: transparent !important;
+    color: var(--paper) !important;
+    box-shadow: none !important;
+}
+
 .mobile-menu {
     position: absolute;
     left: 0;
@@ -97,8 +123,44 @@
 }
 
 .mobile-menu-link:not(.nav-link-active):hover {
-    background: rgba(255, 121, 0, 0.1);
     color: var(--primary);
+}
+
+[class*="rounded-"]:not(.blur-3xl):not(.h-3):not(.nav-link) {
+    box-shadow: 6px 8px 0 var(--dark) !important;
+}
+
+.navbar-shell [class*="rounded-"] {
+    box-shadow: none !important;
+}
+
+.navbar-shell {
+    border-color: transparent !important;
+    box-shadow: none !important;
+}
+
+.navbar-shell.navbar-scrolled,
+.navbar-shell.navbar-solid {
+    border-color: transparent !important;
+    box-shadow: none !important;
+}
+
+.navbar-shell .mobile-menu {
+    border-color: transparent !important;
+    box-shadow: none !important;
+}
+
+.navbar-shell .nav-active-indicator {
+    box-shadow: 0 18px 50px rgba(255, 121, 0, 0.24) !important;
+}
+
+.navbar-shell,
+.navbar-shell * {
+    box-shadow: none !important;
+}
+
+.navbar-shell .nav-active-indicator {
+    box-shadow: 0 18px 50px rgba(255, 121, 0, 0.24) !important;
 }
 
 .page-hero-pattern {
@@ -106,4 +168,8 @@
         radial-gradient(circle at 12% 20%, rgba(255, 121, 0, 0.28), transparent 28rem),
         radial-gradient(circle at 88% 8%, rgba(255, 121, 0, 0.12), transparent 26rem),
         var(--dark);
+}
+
+.navbar-shell .nav-link {
+    box-shadow: none !important;
 }
